@@ -1,0 +1,85 @@
+.form {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: white!important;
+}
+
+.field {
+  margin: 40px 0;
+  position: relative;
+  width: 100%;
+}
+
+.field label {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  color: #ffffff99;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.field ::placeholder {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  color: #ffffff99;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.field input:focus + label,
+.field input:valid + label,
+.field textarea:focus + label,
+.field textarea:valid + label {
+  top: -20px;
+  left: 0;
+  color: #ffffff;
+  font-size: 12px;
+} 
+
+.field input {
+  /* remove all styles */
+  all: unset;
+  width: 100%;
+  border-bottom: 2px solid #ffffff33;
+}
+
+.field textarea {
+  /* remove all styles */
+  all: unset;
+  width: 100%;
+  border-bottom: 2px solid #ffffff33;
+  min-height: 30px;
+  /* remove scrollbar from text area and add the drag button for resizing */
+  resize: vertical;
+  overflow: auto;
+  /* no scrollbar on right */
+  scrollbar-width: none;
+  position: relative;
+}
+
+.row {
+  /* create a full width grid row with two columns */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .row {
+    /* create two rows with single column */
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  
+}

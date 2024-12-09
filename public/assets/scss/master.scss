@@ -1,0 +1,213 @@
+@import "utils/variables";
+@import "utils/mixin";
+@import "utils/space";
+@import "utils/animation";
+@import "utils/theme";
+@import "utils/theme-dark";
+
+@import "components/button";
+@import "components/title";
+@import "components/menu";
+@import "components/modal";
+@import "components/cursor";
+@import "components/switcher";
+
+@import "layout/header";
+@import "layout/offcanvas";
+@import "layout/hero";
+@import "layout/slider";
+@import "layout/about";
+@import "layout/service";
+@import "layout/counter";
+@import "layout/workflow";
+@import "layout/brand";
+@import "layout/testimonial";
+@import "layout/portfolio";
+@import "layout/portfolio-2";
+@import "layout/blog";
+@import "layout/cta";
+@import "layout/story";
+@import "layout/team";
+@import "layout/solution";
+@import "layout/development";
+@import "layout/award";
+@import "layout/faq";
+@import "layout/home-9";
+@import "layout/video";
+@import "layout/client";
+@import "layout/career";
+@import "layout/feature";
+@import "layout/contact";
+@import "layout/price";
+@import "layout/error";
+@import "layout/home-5";
+@import "layout/footer";
+@import "components/preloader";
+@import "layout/home-6";
+@import "layout/home-7";
+@import "layout/home-11";
+@import "utils/dir-rtl";
+
+.custom-words-wrapper {
+    overflow: hidden;
+}
+
+.custom-text {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(1em);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.custom-text.custom-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+@keyframes custom-text-animation {
+    0% {
+        transform: translateY(1em);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1em);
+        opacity: 0;
+    }
+}
+
+.btn_centered {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+        margin-top: 3rem;
+        /* Adjust margin for small screens */
+        margin-bottom: 3rem;
+        /* Adjust margin for small screens */
+    }
+}
+
+// Modal.scss
+
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 160;
+}
+
+.modal-content {
+    position: relative;
+    z-index: 201;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    @media (min-width: 768px) {
+        padding: 3rem;
+    }
+
+    .modal-main-div {
+        width: 100%;
+        height: 100%;
+        background-color: #232323;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .modal-iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 0rem;
+        right: 0rem;
+        background: #00000099;
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+        z-index: 250;
+    }
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.modern-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: darkgray transparent;
+  
+    /* For Webkit browsers like Chrome, Safari */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #232323;
+      border-radius: 20px;
+      border: 3px solid transparent;
+    }
+  }
+
+  .portfolio-image {
+    @media #{$sm} {
+        width: 100%;
+    }
+    @media #{$md} {
+        width: 100%;
+    }
+  }
+  .portfolio-logo {
+    @media #{$sm} {
+        width: 40%;
+    }
+    @media #{$md} {
+        width: 40%;
+    }
+  }

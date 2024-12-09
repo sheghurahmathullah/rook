@@ -1,0 +1,55 @@
+{
+  "nav": [
+    
+    {
+      "nav_name": "What We Do?",
+      "link": "/#",
+      "type": "dropdown",
+      "sub_nav": [
+        {
+          "name": "Digital Marketing",
+          "link": "/service/marketing"
+        },
+        {
+          "name": "SEO",
+          "link": "/service/seo"
+        },
+        {
+          "name": "MetaAds",
+          "link": "/service/metaads"
+        },
+        {
+          "name": "Social Media Management",
+          "link": "/service/smm"
+        },
+        {
+          "name": "Email Marketing",
+          "link": "/service/emailmarketing"
+        },
+      
+        {
+          "name": "Lead Nurturing",
+          "link": "/service/leadnurturing"
+        }
+      ]
+    },
+    {
+      "nav_name": "Rook For Business",
+      "link": "/",
+      "type": "",
+      "sub_nav": []
+    },
+    {
+      "nav_name": "Rook For Startups",
+      "link": "/service/gtmstrategy",
+      "type": "",
+      "sub_nav": []
+    },
+    {
+      "nav_name": "Success Stories",
+      "link": "/",
+      "type": "",
+      "sub_nav": []
+    }
+  ]
+}
